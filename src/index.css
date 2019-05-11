@@ -1,0 +1,141 @@
+/*	
+	This css is for styling the body 
+	with all the main Component Box 
+*/
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 20px;
+  background-color: #fff;
+}
+
+/* This is the Dekstop navbar section */
+
+.navbar {
+  background-color: #fff;
+  display: flex;
+  position: -webkit-sticky;
+  position: sticky;
+  top:0;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-left: 15px;
+  padding-right: 30px;
+  border: 1px solid #fff;
+  -webkit-box-shadow: 8px 10px 20px -8px #D3D3D3;
+  box-shadow: 8px 10px 20px -8px #D3D3D3;
+}
+
+/* This is the Dekstop left-bar section */
+
+.left-bar,
+.left-bar-optional {
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 16%;
+  position: -webkit-fixed;
+  position: fixed;
+  z-index: 1;
+  background-color: #ffffff;
+  -webkit-box-shadow: 8px 10px 10px -8px #D3D3D3;
+  box-shadow: 8px 10px 10px -8px #D3D3D3;
+  border: 0px solid #fff;
+  border-radius: 0px;
+  color: #000;
+  min-width: 200px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0px 20px 20px 20px;
+  margin-right: 0px;
+  left: 0;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/* This is the Dekstop menu-bar section */
+
+.menubar {
+  -ms-flex-direction: column;
+  flex-direction: column;  
+  width: 60px;
+  min-width: 50px;
+  height: 100%;
+  background-color: #fff;
+  z-index: 0;
+  position: -webkit-fixed;
+	position: fixed;
+  -webkit-box-shadow: 8px 16px 10px 8px #D3D3D3;
+  box-shadow: 8px 16px 10px 8px #D3D3D3;
+  padding: 0px 20px 20px 20px;
+  margin-left:0px;
+  right: 0;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.menu {
+  position: -webkit-fixed;
+  position: fixed;
+  top: 14%;
+  margin-left: -5px;
+  list-style:none;
+  text-align:center;
+}
+
+.menu-home {
+  margin-bottom: 20px;
+  text-align:center;
+  padding: 5px;
+}
+
+.menu-home:hover {
+  background: #d3d3d3;
+  background-size: 100% 100%;
+  color: #fff;
+  animation: spring 300ms ease-out;
+  text-shadow: 0 -1px 0 #ef816c;
+}
+
+.menu-home:active {
+  transform: translateY(4px);
+}
+
+.menu-chat {
+  margin-bottom: 20px;
+  text-align:center;
+  padding: 5px;
+}
+
+.menu-chat:hover {
+  background-image: url('http://scottyzen.com/cp/button.png');
+  background-size: 100% 100%;
+  color: #fff;
+  animation: spring 300ms ease-out;
+}
+
+.menu-chat:active {
+  transform: translateY(2px);
+}
+
+.menu-settings {
+  margin-bottom: 20px;
+  text-align:center;
+  padding: 5px;
+}
+
+.menu-settings:hover {
+  background-image: url('http://scottyzen.com/cp/button.png');
+  background-size: 100% 100%;
+  color: #fff;
+  animation: spring 300ms ease-out;
+  text-shadow: 0 -1px 0 #ef816c;
+}
+
+.menu-settings:active {
+  transform: translateY(4px);
+}
