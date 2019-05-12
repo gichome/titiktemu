@@ -1,11 +1,12 @@
-import React, {Component} from "react";
+import React, {Component} from 'react'
 import {
   ReactiveBase, DataSearch, MultiDataList,  MultiList,  SelectedFilters,
   ResultCard,  ToggleButton,
-} from "@appbaseio/reactivesearch";
-import "./App.css";
+} from '@appbaseio/reactivesearch'
+import './App.css'
 //Importing Todo App from components
 import MainTodoApp from './components/MainTodoApp'
+
 
 class Main_TitiktemuApp extends Component {
   constructor(props) {
@@ -56,45 +57,33 @@ class Main_TitiktemuApp extends Component {
                 alt="titiktumbuh"
               />
             </div>
-            {/*Toogle List Component*/}
-            <div className="toggle-container">
-              <ToggleButton
-              componentId="Apps"
-              dataField="category_apps.keyword"
-              data={
-                [{"label": "Paper",   "value": "Paper"},
-                {"label": "Course",   "value": "Course"}]
-              }
-              />
-            </div>
-          {/*Search Container Component*/}
-            <div className="search-container">
-              <DataSearch
-                componentId="mainSearch"
-                dataField={["original_title"]}
-                categoryField="title"
-                className="search-bar"
-                queryFormat="and"
-                placeholder="Search paper topic or the course here"
-                iconPosition="left"
-                autosuggest={true}
-                filterLabel="search"
-              />
-            </div>
+            {/*Search Container Component*/}
           </div>
           {/*Menubar Component*/}
-          <div className="menubar">
-            <div className="menu">
-              <div className="menu-home">
-                <i class="material-icons">home</i>
-              </div>
-              <div className="menu-chat">
-                <i class="material-icons">chat</i>
-              </div>
-              <div className="menu-settings">
-                <i class="material-icons">settings</i>
-              </div>
-            </div>             
+          <div className="menu-bar">
+            <div className="toggle-container">
+              <ToggleButton
+                componentId="Apps"
+                dataField="category_apps.keyword"
+                data={
+                  [{"label": "Paper",   "value": "Paper"},
+                  {"label": "Course",   "value": "Course"}]
+                }
+              />
+            </div>  
+            <div className="search-container">
+                <DataSearch
+                  componentId="mainSearch"
+                  dataField={["original_title"]}
+                  categoryField="title"
+                  className="search-bar"
+                  queryFormat="and"
+                  placeholder="Search paper topic or the course here"
+                  iconPosition="left"
+                  autosuggest={true}
+                  filterLabel="search"
+                />
+            </div>           
           </div>
           {/*Left Container Component*/}
           <div className="sub-container">
@@ -192,18 +181,6 @@ class Main_TitiktemuApp extends Component {
                 }}
               />
               <hr className="blue" />
-              {/*
-              <div className="filter-heading center">
-                <b>
-                  {" "}Tanggal Terbit{" "}
-                </b>
-              </div>
-              <DateRange
-                componentId="date-filter"
-                dataField="release_date.keyword"
-                className="datePicker"
-              />
-              */}
             </div>
             <div
               className={

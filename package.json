@@ -1,6 +1,6 @@
 {
-  "name": "titiktumbuh-prototype",
-  "version": "0.1.0",
+  "name": "titiktemu",
+  "version": "0.5.0",
   "private": true,
   "dependencies": {
     "@appbaseio/reactivesearch": "^2.18.0",

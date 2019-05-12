@@ -6,7 +6,7 @@ class MainTodoApp extends Component {
   state = {
     todos: [
         {id: 1, content: 'This is your priority list example'},
-        {id: 2, content: 'Klik for complete it'}
+        {id: 2, content: 'Click for complete it'}
     ]
   }
   deleteTodo = (id) => {
