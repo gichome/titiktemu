@@ -95,12 +95,3 @@ body {
 .menu-settings:active {
   transform: translateY(4px);
 }
-
-
-.css-1lzhsvr {
-  position: -webkit-fixed;
-  position: fixed; 
-  z-index: -1;
-  background-color: #ffffff;
-  margin-left: 100px;             
-}

@@ -143,6 +143,19 @@ hr {
   margin-right: 15px;
 }
 
+.filters {
+  padding-left: 80px;
+  width: 50%;
+}
+
+.css-1lzhsvr {
+  position: -webkit-relative;
+  position: relative;
+  z-index: 0;
+  background-color: #ffffff;
+  margin-left: 100px;
+}
+
 
 /* Todo App Styling */
 .todo-app{

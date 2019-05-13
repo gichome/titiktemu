@@ -1,0 +1,24 @@
+{
+    "workbench.iconTheme": "vscode-great-icons",
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
+    "editor.formatOnPaste": true,
+    "editor.fontFamily": "Hasklig",
+    "editor.fontLigatures": true,
+    "editor.lineHeight": 20,
+    "editor.fontSize": 14,
+    "workbench.colorTheme": "Eva Dark",
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 100,
+    "emmet.includeLanguages": {
+        "html": "html",
+        "erb": "erb",
+        "javascript": "javascriptreact",
+        "vue": "html",
+        "ejs": "html"
+    },
+    // Pre VS Code 1.15
+    "emmet.syntaxProfiles": {
+        "javascript": "jsx"
+    },
+    "editor.formatOnType": true,
+}

@@ -190,6 +190,7 @@ class Main_TitiktemuApp extends Component {
               }
             >
               <SelectedFilters
+                className="filters"
                 showClearAll={true}
                 clearAllLabel="Clear filters"
               />

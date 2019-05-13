@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@appbaseio/reactivesearch": "^2.18.0",
+    "bulma": "^0.7.4",
     "grommet": "^2.6.6",
     "jquery": "^3.4.1",
     "polished": "^3.2.0",

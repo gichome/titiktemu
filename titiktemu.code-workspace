@@ -1,0 +1,24 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"workbench.iconTheme": "vscode-great-icons",
+		"terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
+		"workbench.colorTheme": "Eva Dark",
+		"files.autoSave": "afterDelay",
+		"files.autoSaveDelay": 100,
+		"emmet.includeLanguages": {
+			"html": "html",
+			"erb": "erb",
+			"javascript": "javascriptreact",
+			"vue": "html",
+			"ejs": "html"
+		},
+		"emmet.syntaxProfiles": {
+			"javascript": "jsx"
+		}
+	}
+}
