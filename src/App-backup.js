@@ -1,25 +1,18 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react'
 import {
-    ReactiveBase, DataSearch, MultiDataList, MultiList, SelectedFilters,
-    ResultCard, ToggleButton,
-} from '@appbaseio/reactivesearch';
-import './home.css';
-//import index.css for global container
-import '../index.css';
-import MainTodoApp from './Todo/MainTodoApp';
-import System from './iframe/iframesystem';
-
-//Navbar Component
-import Navbar from './Navbar';
+  ReactiveBase, DataSearch, MultiDataList,  MultiList,  SelectedFilters,
+  ResultCard,  ToggleButton,
+} from '@appbaseio/reactivesearch'
+import './App.css'
+//Importing Todo App from components
+import MainTodoApp from './components/Todo/MainTodoApp'
 
 
-
-class home extends Component {
+class searchapp extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      toogleTopic: false,
       isClicked: false,
       message: "🔬Filter Hasil"
     };
@@ -34,10 +27,7 @@ class home extends Component {
   }
   render() {
     return (
-      <div className="main-container"> 
-        <Navbar />
-        {/*Main Container that import ReactiveBase from appbase.io*/}
-        
+      <div className="main-container"> {/*Ini untuk memanggil listing data dari Appbase dengan setting default*/}
         <ReactiveBase
           app="titiktumbuh"
           credentials="muukPSVII:7f4c58f2-06b2-4b39-822b-146da03027c4"
@@ -58,11 +48,9 @@ class home extends Component {
             }
           }}
         >
-          {/*Menubar Container*/}
-          <div className="menubar-container">
-            
-            {/* Toggle Component */}
-            <div className="toggle-component">
+          {/*Menubar Component*/}
+          <div className="menu-bar">
+            <div className="toggle-container">
               <ToggleButton
                 componentId="Apps"
                 dataField="category_apps.keyword"
@@ -72,9 +60,7 @@ class home extends Component {
                 }
               />
             </div>  
-
-            {/* Search Component */}
-            <div className="search-component">
+            <div className="search-container">
                 <DataSearch
                   componentId="mainSearch"
                   dataField={["original_title"]}
@@ -86,36 +72,27 @@ class home extends Component {
                   autosuggest={true}
                   filterLabel="search"
                 />
-            </div>
-
-            {/* Spotify Component */}
-            <div className="spotify-component">
-              <System src="https://open.spotify.com/embed/user/chillhopmusic/playlist/74sUjcvpGfdOvCHvgzNEDO" width="240" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"/>
-            </div>
+            </div>           
           </div>
-
-          {/*Left Container (for filter the result of app)*/}
+          {/*Left Container Component*/}
           <div className="sub-container">
             <div className={
                 this.state.isClicked ? "left-bar-optional" : "left-bar"
               }
             >
-              {/*Todoapp Component*/}
               <div className="filter-heading center">
                 <b>
                   {" "}Your Prority List{" "}
                 </b>
               </div> 
               <MainTodoApp />
-
-              <hr className="seperator" /> {/*Seperator*/}
-
-              {/*Category List Component*/}
+              <hr className="blue" />
               <div className="filter-heading center">
                 <b>
                   {" "}Category List{" "}
                 </b>
               </div>
+            {/*Category List Component*/}
               <MultiList
                 componentId="category-list"
                 dataField="genres_data.keyword"
@@ -146,15 +123,13 @@ class home extends Component {
                   input: "list-input"
                 }}
               />
-
-              <hr className="seperator" /> {/*Seperator*/}
-
-              {/*Source Languages Component*/}
+              <hr className="blue" />
               <div className="filter-heading center">
                 <b>
                   {" "}Source Languages{" "}
                 </b>
               </div>
+              {/*Language List Component*/}
               <MultiDataList
                 componentId="language-list"
                 dataField="original_language.keyword"
@@ -193,10 +168,10 @@ class home extends Component {
                   input: "list-input"
                 }}
               />
+              <hr className="blue" />
             </div>
             <div
-              className=
-              {
+              className={
                 this.state.isClicked
                   ? "result-container-optional"
                   : "result-container"
@@ -286,4 +261,4 @@ class home extends Component {
   }
 }
 
-export default home;
+export default searchapp;

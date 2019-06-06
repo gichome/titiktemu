@@ -2,10 +2,9 @@
     "workbench.iconTheme": "vscode-great-icons",
     "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
     "editor.formatOnPaste": true,
-    "editor.fontFamily": "Hasklig",
+    "editor.fontFamily": "Operator Mono",
     "editor.fontLigatures": true,
-    "editor.lineHeight": 20,
-    "editor.fontSize": 14,
+    "editor.lineHeight": 25,
     "workbench.colorTheme": "Eva Dark",
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 100,
@@ -21,4 +20,5 @@
         "javascript": "jsx"
     },
     "editor.formatOnType": true,
+    "editor.tabSize": 2,
 }

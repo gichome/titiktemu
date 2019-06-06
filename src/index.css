@@ -1,6 +1,5 @@
 /*	
-	This css is for styling the body 
-	with all the main Component Box 
+	This css is global styling 
 */
 
 body {
@@ -11,11 +10,72 @@ body {
   background-color: #fff;
 }
 
-/* This is the Dekstop navbar section */
+/* General Styleling*/
+.main-container {
+  margin: 0 0px;
+}
+
+.sub-container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.css-w2vgtg {
+  position: absolute;
+  top: calc(30% - 8px);
+  cursor: pointer;
+  padding-right: 12px;
+  right: 0;
+}
+
+hr {
+  margin: 5px 0px 20px 0px;
+}
+
+.center {
+  text-align: center;
+}
+
+/* This is the Landingpage section */
+
+#M1 {
+  flex-basis: 35%;
+  position: relative;
+}
+
+#M2 {
+  flex-basis: 65%;
+  position: relative;
+  max-width: 70%;
+  min-height: 20%;
+  height: 100%;
+}
+
+#m1 {
+  flex-basis: 30%;
+  margin: 0.5em;
+  position: relative;
+}
+
+#m2 {
+  flex-basis: 60%;
+  margin: 0.5em;
+  position: relative;
+  max-width: 70%;
+  min-height: 20%;
+  height: 100%;
+}
+
+/* styling for Navbar Component */
 
 .navbar {
-  z-index: 2;
+  z-index: 100;
   background-color: #fff;
+  color: #000;
   display: flex;
   position: -webkit-sticky;
   position: sticky;
@@ -25,73 +85,112 @@ body {
   flex-direction: row;
   justify-content: flex-start;
   padding-left: 15px;
-  padding-right: 30px;
-  border: 1px solid #fff;
-  -webkit-box-shadow: 8px 5px 10px -1px #D3D3D3;
-  box-shadow: 8px 5px 10px -1px #D3D3D3;
+  padding-right: 15px;
+  -webkit-box-shadow: 8px 5px 5px -1px #f0f0f0;
+  box-shadow: 8px 5px 5px -1px #f0f0f0;
 }
 
+.logo-container {
+  width: 75%;
+  margin-left: 60px;
+  margin-right: 70px;
+  padding: 10px;
+  margin-top: 0px;
+  height: 100%;
+}
+
+.app-logo {
+  margin-left: 0px !important;
+  margin-top: 5px;
+  left: 0px;
+  width: 130px;
+  height: 30px;
+}
+
+.navbar a {
+  display: block;
+  color: black;
+  text-align: center;
+  margin-top: 3px;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #ef816c;
+  text-decoration: none;
+}
+
+/* .active-navlink-home {
+  color: #ef816c;
+}
+
+.active-navlink-event {
+  color: #3c5a99;
+}
+
+.active-navlink-chat {
+  color: #008080;
+} */
+
+.signout {
+  margin-left: auto;
+  margin-right: 1rem;
+  margin-top:6px;
+}
+
+.signout-btn {
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: 1rem;
+  color: #000000;
+  width: 20px;
+  height: 20px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.signout:hover {
+  color: #b61f1f;
+  text-decoration: none;
+}
+
+/* #Mli1 {
+  text-align: center;
+  width: 100%;
+}
+
+#Mli2 {
+  text-align: center;
+  width: 100%;
+}
+
+#Mli3 {
+  text-align: center;
+  width: 100%;
+} */
 
 /* This is the Dekstop menu-bar section */Result_card
 
-.menu {
+.menubar {
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 60px;
+  min-width: 50px;
+  height: 100%;
+  margin-left: 1000px;
+  background-color: #fff;
+  z-index: 0;
   position: -webkit-fixed;
   position: fixed;
-  top: 14%;
-  margin-left: -5px;
-  list-style:none;
-  text-align:center;
+  -webkit-box-shadow: 8px 16px 10px 8px #D3D3D3;
+  box-shadow: 8px 16px 10px 8px #D3D3D3;
+  padding: 0px 20px 20px 20px;
+  margin-left: 0px;
+  right: 0;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
-.menu-home {
-  margin-bottom: 20px;
-  text-align:center;
-  padding: 5px;
-}
-
-.menu-home:hover {
-  background: #d3d3d3;
-  background-size: 100% 100%;
-  color: #fff;
-  animation: spring 300ms ease-out;
-  text-shadow: 0 -1px 0 #ef816c;
-}
-
-.menu-home:active {
-  transform: translateY(4px);
-}
-
-.menu-chat {
-  margin-bottom: 20px;
-  text-align:center;
-  padding: 5px;
-}
-
-.menu-chat:hover {
-  background-image: url('http://scottyzen.com/cp/button.png');
-  background-size: 100% 100%;
-  color: #fff;
-  animation: spring 300ms ease-out;
-}
-
-.menu-chat:active {
-  transform: translateY(2px);
-}
-
-.menu-settings {
-  margin-bottom: 20px;
-  text-align:center;
-  padding: 5px;
-}
-
-.menu-settings:hover {
-  background-image: url('http://scottyzen.com/cp/button.png');
-  background-size: 100% 100%;
-  color: #fff;
-  animation: spring 300ms ease-out;
-  text-shadow: 0 -1px 0 #ef816c;
-}
-
-.menu-settings:active {
-  transform: translateY(4px);
-}
