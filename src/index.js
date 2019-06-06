@@ -8,7 +8,6 @@ import landingpage from './components/landingpage';
 import event from './components/event';
 import nothinghere from './components/nothinghere';
 import chat from './components/chat';
-// import Navbar from './components/Navbar';
 import { Route, Switch, BrowserRouter as Router, withRouter } from 'react-router-dom';
 import Register from './components/Auth/Register';
 import Login from './components/Auth/Login';
@@ -18,6 +17,8 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import rootReducer from './reducers';
 import { setUser, clearUser } from './actions';
 import Spinner from './loadingspinner';
+import paper from './components/App/paper';
+import course from './components/App/course';
 
 const store = createStore(rootReducer, composeWithDevTools());
 
@@ -45,6 +46,8 @@ class Root extends Component {
             <Route exact path="/chat" component={chat} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
+            <Route exact path="/home/course" component={course} />
+            <Route exact path="/home/paper" component={paper} />
             <Route component={nothinghere} />
           </Switch>
         </div>

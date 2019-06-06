@@ -28,8 +28,8 @@ class Navbar extends Component {
         <a href="/">
           <NavLink activeClassName="active-navlink-home" exact to="/">Home</NavLink>
         </a>
-        <a href="/event">
-          <NavLink activeClassName="active-navlink-event" exact to="/event">Event</NavLink>
+        <a href="/home/paper">
+          <NavLink activeClassName="active-navlink-event" exact to="/home/paper">Paper</NavLink>
         </a>
         <a href="/chat">
           <NavLink activeClassName="active-navlink-chat" exact to="/chat">Chat</NavLink>

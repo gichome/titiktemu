@@ -12,16 +12,6 @@ import Navbar from './Navbar';
 
 import './chat.css';
 
-// export class chat extends Component {
-//     render() {
-//         return (
-//             <div>
-//                 <Navbar/>
-//             </div>
-//         )
-//     }
-// }
-
 const Chat = ({ currentUser, currentChannel, isPrivateChannel, topPosters }) => (
     <div>
         <Navbar/>

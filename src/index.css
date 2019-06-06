@@ -181,7 +181,7 @@ hr {
   margin-left: 1000px;
   background-color: #fff;
   z-index: 0;
-  position: -webkit-fixed;
+  -webkit-position: fixed;
   position: fixed;
   -webkit-box-shadow: 8px 16px 10px 8px #D3D3D3;
   box-shadow: 8px 16px 10px 8px #D3D3D3;
