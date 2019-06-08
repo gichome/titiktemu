@@ -1,47 +1,28 @@
-/*  
-  This css is for styling the home page
-  detailed Component and Responsive
-  Styling for Tab and Mobile
-*/
-
-/* Styling Menu */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: 20px;
-  background-color: rgb(122, 49, 49);
-}
-
-/* General Styleling*/
-.main-container {
-  margin: 0 0px;
-}
-
-.right-container {
-  -webkit-box-align: center;
-  -webkit-box-direction: normal;
-  -webkit-box-flex: 0;
-  -webkit-box-orient: vertical;
-  -webkit-box-pack: center;
-  -webkit-tap-highlight-color: transparent;
-  align-items: center;
-  background-color: #3f7fc1;
-  box-sizing: border-box;
-  display: flex;
-  flex: 0 0 50%;
-  flex-direction: column;
-  flex-wrap: nowrap;
+.home-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
   height: 100%;
-  justify-content: center;
-  padding: 60px 0;
-  position: relative;
-  transform: scaleY(1);
-  transform-origin: 0% 0%;
-  width: 50%;
+  flex-flow: row nowrap;
+  overflow: hidden;
+  display: flex;
 }
 
-.left-container {
+.home-cell {
+  min-height: 75px;
+  flex-grow: 1;
+  flex-basis: 100%;
+  padding: 0px;
+  margin: -10px 0 0 0; 
+}
+
+.home-cell:hover {
+  background-color: white;
+}
+
+.home-cell#h1 {
   -webkit-box-align: center;
   -webkit-box-direction: normal;
   -webkit-box-flex: 0;
@@ -49,7 +30,7 @@ body {
   -webkit-box-pack: center;
   -webkit-tap-highlight-color: transparent;
   align-items: center;
-  background-color: #7ecdda;
+  background-color: #ef816c;
   box-sizing: border-box;
   display: flex;
   flex: 0 0 50%;
@@ -62,4 +43,139 @@ body {
   transform: scaleY(1);
   transform-origin: 100% 100%;
   width: 50%;
+  transition: 0.5s ease-in-out;
+}
+
+.home-cell#h1:hover, .home-cell#h2:hover {
+  background-color: whitesmoke;
+}
+
+.home-cell#h2 {
+  -webkit-box-align: center;
+  -webkit-box-direction: normal;
+  -webkit-box-flex: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: center;
+  -webkit-tap-highlight-color: transparent;
+  align-items: center;
+  background-color: teal;
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 0 50%;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: 100%;
+  justify-content: center;
+  padding: 60px 0;
+  position: relative;
+  transform: scaleY(1);
+  transform-origin: 0% 0%;
+  width: 50%;
+  transition: 0.5s ease-in-out;
+}
+
+.ui.button.Paper {
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+  color: #00000060;
+  background-color: #f5a999;
+  display: inline-block;
+  font-weight: 700;
+  height: 100%;
+  left: 0;
+  padding: 12px 30px;
+  position: relative;
+  top: 0;
+  transition-delay: 0s,
+  0s;
+  transition-duration: .4s,
+  .4s;
+  transition-property: transform,-webkit-transform;
+  transition-timing-function: cubic-bezier(.65, 0, .076, 1),
+  cubic-bezier(.65, 0, .076, 1);
+  width: 100%;
+  z-index: 5;
+  border-radius: 25px;
+}
+
+.ui.button.Paper:hover {
+  transform: translateX(3px) translateY(3px);
+  background-color: #ef816c;
+}
+
+.ui.button.Course {
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+  color: #00000060;
+  background-color: rgb(0, 163, 163);
+  display: inline-block;
+  font-weight: 700;
+  height: 100%;
+  left: 0;
+  padding: 12px 30px;
+  position: relative;
+  top: 0;
+  transition-delay: 0s,
+    0s;
+  transition-duration: .4s,
+    .4s;
+  transition-property: transform, -webkit-transform;
+  transition-timing-function: cubic-bezier(.65, 0, .076, 1),
+    cubic-bezier(.65, 0, .076, 1);
+  width: 100%;
+  z-index: 5;
+  border-radius: 25px;
+}
+
+.ui.button.Course:hover {
+  transform: translateX(3px) translateY(3px);
+  background-color: teal;
+}
+
+@media (max-width: 768px) {
+  .home-cell#h1 {
+    -webkit-box-align: center;
+    -webkit-box-direction: normal;
+    -webkit-box-flex: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-pack: center;
+    -webkit-tap-highlight-color: transparent;
+    align-items: center;
+    background-color: #ef816c;
+    box-sizing: border-box;
+    display: flex;
+    flex: 1 0 50%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: auto;
+    justify-content: center;
+    padding: 80px 0 60px;
+    position: relative;
+    transform: scaleY(1);
+    transform-origin: 100% 100%;
+    width: 100%;
+  }
+
+  .home-cell#h2 {
+    -webkit-box-align: center;
+    -webkit-box-direction: normal;
+    -webkit-box-flex: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-pack: center;
+    -webkit-tap-highlight-color: transparent;
+    align-items: center;
+    background-color: #3f7fc1;
+    box-sizing: border-box;
+    display: flex;
+    flex: 1 0 50%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: auto;
+    justify-content: center;
+    padding: 60px 0;
+    position: relative;
+    transform: scaleY(1);
+    transform-origin: 0% 0%;
+    width: 100%;
+  }
 }

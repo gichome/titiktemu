@@ -186,7 +186,7 @@ body {
     }
 
     .foot-form-title {
-        width: autopx;
+        width: auto;
     }
 
     .row {

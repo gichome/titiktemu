@@ -17,8 +17,8 @@ const Chat = ({ currentUser, currentChannel, isPrivateChannel, topPosters }) => 
         <Navbar/>
         <Grid
             columns="equal"
-            className = "chat"
-            style = {
+            className="chat"
+            style={
             {
                 background: "#fff"
             }
@@ -56,5 +56,5 @@ const mapStateToProps = state => ({
     isPrivateChannel: state.channel.isPrivateChannel,
     topPosters: state.channel.topPosters
 });
-
+ 
 export default connect(mapStateToProps)(Chat);

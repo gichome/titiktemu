@@ -11,7 +11,7 @@ class Navbar extends Component {
       .signOut()
       .then(() => console.log('Sign Out!'));
   }
-  
+
   render() {
     return (
       <header className="navbar">
@@ -19,7 +19,7 @@ class Navbar extends Component {
           <NavLink exact to="/">
             <img
               className="app-logo"
-              src="Images/logo.png"
+              src="../../public/Images/logo.png"
               alt="titiktumbuh"
             />
           </NavLink>
@@ -28,8 +28,8 @@ class Navbar extends Component {
         <a href="/">
           <NavLink activeClassName="active-navlink-home" exact to="/">Home</NavLink>
         </a>
-        <a href="/home/paper">
-          <NavLink activeClassName="active-navlink-event" exact to="/home/paper">Paper</NavLink>
+        <a href="/event">
+          <NavLink activeClassName="active-navlink-event" exact to="/event">Event</NavLink>
         </a>
         <a href="/chat">
           <NavLink activeClassName="active-navlink-chat" exact to="/chat">Chat</NavLink>

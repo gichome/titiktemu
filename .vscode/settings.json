@@ -2,7 +2,7 @@
     "workbench.iconTheme": "vscode-great-icons",
     "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
     "editor.formatOnPaste": true,
-    "editor.fontFamily": "Operator Mono",
+    "editor.fontFamily": "Fira Code Retina",
     "editor.fontLigatures": true,
     "editor.lineHeight": 25,
     "workbench.colorTheme": "Eva Dark",
