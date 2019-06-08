@@ -8,22 +8,34 @@ class home extends Component {
         return (
             <div className="home-container">
               <div className="home-cell" id="h1">
-                <h1>
-                  <NavLink exact to="/home/paper">
-                    <Button className="Paper">
-                      Search your paper here
-                    </Button>
-                  </NavLink>
-                </h1>
+                <div className="content-container">
+                  <img
+                    className="BG-home"
+                    src="Images/Production-Paper.png"
+                    alt="BG-Paper"
+                  />
+                </div>
+                <h1 className="home-desc">Bost your knowledge and find your acedemical needs</h1>
+                <NavLink exact to="/home/paper">
+                  <Button className="Paper">
+                    Search your paper here
+                  </Button>
+                </NavLink>
               </div>
               <div className="home-cell" id="h2">
-                <h1>
-                  <NavLink exact to="/home/Course">
-                    <Button className="Course">
-                      Search your course here 
-                    </Button>
-                  </NavLink>
-                </h1>
+                <div className="content-container">
+                  <img
+                    className="BG-home"
+                    src="Images/Production-Course.png"
+                    alt="BG-Paper"
+                  />
+                </div>
+                <h1 className="home-desc">Find your passion and explore your curiosity</h1>
+                <NavLink exact to="/home/Course">
+                  <Button className="Course">
+                    Search your course here 
+                  </Button>
+                </NavLink>
               </div>
           </div>
         )

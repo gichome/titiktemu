@@ -1,6 +1,6 @@
 import React from "react";
+import { Grid, Form, Segment, Button, Header, Message } from 'semantic-ui-react';
 import firebase from '../firebase';
-import { Grid, Form, Segment, Button, Header, Message, Icon } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 // Import md5 for providing unique value to User Avatar
 import md5 from 'md5';
@@ -121,8 +121,8 @@ class Register extends React.Component {
         return (
             <Grid textAlign="center" verticalAlign="middle" className="registerlogin">
                 <Grid.Column style={{ maxWidth: 450 }}>
-                    <Header as="h1" icon color="black" textAlign="center">
-                        <Icon name="puzzle piece" color="black" />
+                    <Header as="h1" icon color="black" textAlign="center"
+                    style={{marginBottom:"30px"}}>
                         Join titiktemu
                     </Header>
 
@@ -179,7 +179,7 @@ class Register extends React.Component {
                             <Button
                                 disabled={loading}
                                 className={loading ? 'loading' : ''}
-                                color="orange"
+                                style={{background:"#008080", color:"#fff"}}
                                 fluid
                                 size="medium">
                                 Process my account
@@ -192,8 +192,8 @@ class Register extends React.Component {
                             {this.dispalyErrors(errors)}
                         </Message>
                     )}
-                    <Message>
-                        Already a user? <Link to="/login">Login here</Link>
+                    <Message style={{fontSize:"14px"}}>
+                        Already a user? <Link to="/login">Login here!</Link>
                     </Message>
                 </Grid.Column>
             </Grid>

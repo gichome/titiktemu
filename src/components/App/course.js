@@ -86,6 +86,7 @@ class course extends Component {
                   iconPosition="right"
                   autosuggest={true}
                   filterLabel="search"
+                  style={{borderColor:"#008080"}}
                 />
             </div>
 

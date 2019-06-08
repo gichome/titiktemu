@@ -1,6 +1,6 @@
 import React from "react";
 import firebase from '../firebase';
-import { Grid, Form, Segment, Button, Header, Message, Icon } from 'semantic-ui-react';
+import { Grid, Form, Segment, Button, Header, Message } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import './registerlogin.css';
 
@@ -54,9 +54,14 @@ class Login extends React.Component {
 
         return (
             <Grid textAlign="center" verticalAlign="middle" className="registerlogin">
-                <Grid.Column style={{ maxWidth: 450 }}>
-                    <Header as="h1" icon color="violet" textAlign="center">
-                        <Icon name="code branch" color="violet" />
+            <Grid.Column style={{ maxWidth: 450 }}>
+                    {/* <img
+                          className="app-logo"
+                          src="../../logo.svg"
+                          alt="titiktemu"
+                    /> */}
+                    <Header as="h1" icon color="black" textAlign="center" 
+                    style={{marginBottom:"30px"}}>
                         Login to titiktemu
                     </Header>
 
@@ -90,7 +95,7 @@ class Login extends React.Component {
                             <Button
                                 disabled={loading}
                                 className={loading ? 'loading' : ''}
-                                color="violet"
+                                style={{background:"#E43F35", color:"#fff"}}
                                 fluid
                                 size="medium">
                                 Login
@@ -103,7 +108,7 @@ class Login extends React.Component {
                             {this.dispalyErrors(errors)}
                         </Message>
                     )}
-                    <Message>
+                    <Message style={{fontSize:"14px"}}>
                         Don't have an account? <Link to="/register">Join here!</Link>
                     </Message>
                 </Grid.Column>

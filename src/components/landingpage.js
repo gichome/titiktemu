@@ -13,7 +13,7 @@ class landingpage extends Component {
                 <div className="cell" id="ii87nh">
                     <img
                         className = "BG-landing"
-                        src="Images/BG-landing.png"
+                        src="Images/Landingpage.png"
                         alt="landing-titiktumbuh"
                     />
                 </div>
