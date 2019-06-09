@@ -100,7 +100,7 @@ h1.home-desc {
 .ui.button.Paper {
   -webkit-tap-highlight-color: transparent;
   box-sizing: border-box;
-  color: #00000060;
+  color: #ffffff;
   background-color: #f5a999;
   display: inline-block;
   font-weight: 700;
@@ -129,7 +129,7 @@ h1.home-desc {
 .ui.button.Course {
   -webkit-tap-highlight-color: transparent;
   box-sizing: border-box;
-  color: #00000060;
+  color: #ffffff;
   background-color: rgb(0, 163, 163);
   display: inline-block;
   font-weight: 700;

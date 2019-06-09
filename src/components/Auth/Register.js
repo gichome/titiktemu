@@ -121,8 +121,13 @@ class Register extends React.Component {
         return (
             <Grid textAlign="center" verticalAlign="middle" className="registerlogin">
                 <Grid.Column style={{ maxWidth: 450 }}>
-                    <Header as="h1" icon color="black" textAlign="center"
-                    style={{marginBottom:"30px"}}>
+                    <img
+                          className="logogram"
+                          src="Images/logogram.png"
+                          alt="titiktemu"
+                    />
+                    <Header as="h1" icon color="black" textAlign="center" 
+                    style={{marginBottom:"20px", marginTop:"10px"}}>
                         Join titiktemu
                     </Header>
 

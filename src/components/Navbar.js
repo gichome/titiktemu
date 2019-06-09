@@ -19,8 +19,8 @@ class Navbar extends Component {
           <NavLink exact to="/">
             <img
               className="app-logo"
-              src="../../public/Images/logo.png"
-              alt="titiktumbuh"
+              src="Images/logo.png"
+              alt="titiktemu"
             />
           </NavLink>
         </div>
