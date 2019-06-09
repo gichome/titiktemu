@@ -13,9 +13,9 @@
   padding: 15px;
 }
 
-/* .col a {
-  
-} */
+span:hover {
+  color:#000 !important;
+}
 
 .row>.col:first-child {
   border-right: 1px solid #ccc;
@@ -65,11 +65,34 @@
   }
 }
 
-/* apps */
+/** Resultlist Styling */
+
+.css-1a2fxm3 svg.search-icon {
+  fill:#E43F3560 !important;
+}
+
+.css-1a2fxm3 {
+  box-sizing: border-box;
+  cursor: pointer;
+  padding-right: 12px;
+  position: absolute;
+  right: 0;
+  top: calc(50% - 10px) !important;
+}
 
 .authors-list {
-  color: #9d9d9d;
-  font-weight: bold;
+  color: rgb(129, 129, 129);
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 0.05em;
+}
+
+.paper-overview {
+  color: #000;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
 }
 
 .ratings-list {
@@ -97,6 +120,7 @@
 .book-title {
   white-space: normal;
   margin-top: 4px;
+  letter-spacing: 0.075em;
 }
 
 .book-title-card {

@@ -11,7 +11,6 @@ import System from '../iframe/iframesystem';
 
 //Navbar Component
 import Navbar from '../Navbar';
-import { NavLink } from 'react-router-dom';
 
 
 
@@ -46,8 +45,8 @@ class course extends Component {
           theme={{
             typography: {
               fontFamily:
-                '-apple-system, BlinkMacSystemFont, "Nunito Sans", sans-serif',
-                fontSize: "16px"
+                '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Noto Sans", "Nunito Sans", "Ubuntu", sans-serif',
+              fontSize: "16px"
             },
             colors: {
               textColor: "#000",
@@ -65,11 +64,7 @@ class course extends Component {
           <div className="menubar-container">
             
             {/* Toggle Component */}
-            <div className="toggle-component">
-              <div id="l1">
-                  <NavLink className="login-btn" style={{display: 'block', height: '100%'}} to="/home/paper">Switch to paper</NavLink>
-              </div>
-            </div>
+            <div className="toggle-component"/>
 
             {/* Search Component */}
             <div className="search-component">
@@ -242,26 +237,26 @@ class course extends Component {
                   resultStats: "result-stats",
                   resultsInfo: "result-list-info",
                 }}
-                onData={function(data) {
+                onData={function(res) {
                   return {
                     description: (
                       <div className="main-description">
                         <div className="ih-item square effect6 top_to_bottom">
                           <a
                             target="homepage.keyword"
-                            href={data.homepage}
+                            href={res.homepage}
                           >
                             <div className="img">
                               <img
                                 src={
-                                  data.img_source
+                                  res.img_source
                                 }
-                                alt={data.img_source}
+                                alt={res.img_source}
                                 className="result-image"
                               />
                             </div>
                             <div className="result-title">
-                              {data.original_title}
+                              {res.original_title}
                             </div>
                           </a>
                         </div>

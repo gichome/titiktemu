@@ -30,7 +30,7 @@
   -webkit-box-pack: center;
   -webkit-tap-highlight-color: transparent;
   align-items: center;
-  background-color: #ef816c;
+  background-color: whitesmoke;
   box-sizing: border-box;
   display: flex;
   flex: 0 0 50%;
@@ -47,7 +47,7 @@
 }
 
 .home-cell#h1:hover, .home-cell#h2:hover {
-  background-color: whitesmoke;
+  background-color: white;
 }
 
 .home-cell#h2 {
@@ -58,7 +58,7 @@
   -webkit-box-pack: center;
   -webkit-tap-highlight-color: transparent;
   align-items: center;
-  background-color: teal;
+  background-color: whitesmoke;
   box-sizing: border-box;
   display: flex;
   flex: 0 0 50%;

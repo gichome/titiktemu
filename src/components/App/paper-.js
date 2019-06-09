@@ -18,12 +18,12 @@ class paper extends Component {
 			<div className="main-container">
 				<Navbar />
 				<ReactiveBase
-					app="titiktemu-paper"
-					credentials="0A46CoJZO:b8511923-aece-4b8a-970e-582d1c2b6c74"
+					app="good-books-ds"
+					credentials="nY6NNTZZ6:27b76b9f-18ea-456c-bc5e-3a5263ebc63d"
 					theme={{
             typography: {
               fontFamily:
-                '-apple-system, BlinkMacSystemFont, "Nunito Sans", sans-serif',
+                '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Noto Sans", "Nunito Sans", "Ubuntu", sans-serif',
               fontSize: "16px"
             }
           }}
@@ -43,8 +43,7 @@ class paper extends Component {
                   placeholder="Search paper here"
                   iconPosition="right"
                   autosuggest={true}
-									filterLabel="search"
-									style={{borderColor:"#E43F35"}}
+                  filterLabel="search"
                 />
             </div>
 
@@ -72,10 +71,10 @@ class paper extends Component {
 								<ResultList
 									componentId="SearchResult"
 									dataField="original_title"
-									size={5}
-									onData={this.paperlist}
+									size={3}
+									onData={this.booksList}
 									className="result-list-container"
-									pagination={false}
+									pagination={true}
 									stream={true}
 									paginationAt="bottom"
 									Loader = "Loading..."
@@ -95,36 +94,36 @@ class paper extends Component {
 		);
 	}
 
-	paperlist(data) {
+	booksList(data) {
 		return {
 			title: (
-				<a
-					target="homepage.keyword"
-					href={data.homepage}	>
-					<h3
-						className="book-title"
-						// dangerouslySetInnerHTML={{ __html: data.original_title }}
-					>
-						{data.original_title}
-					</h3>
-				</a>
+				<div
+					className="book-title"
+					dangerouslySetInnerHTML={{ __html: data.original_title }}
+				/>
 			),
 			description: (
 				<div className="flex column justify-space-between">
 					<div>
 						<div>
-							Published by	:{" "}<span className="authors-list">{data.author_data}</span>
+							by <span className="authors-list">{data.authors}</span>
 						</div>
-						<div>
-							<span>
-								Paper Detail	: <p className="paper-overview">{data.overview}</p>
+						<div className="ratings-list flex align-center">
+							<span className="stars">
+								{Array(data.average_rating_rounded)
+									.fill('x')
+									.map((item, index) => (
+										<i className="fas fa-star" key={index} />
+									)) // eslint-disable-line
+								}
 							</span>
+							<span className="avg-rating">({data.average_rating} avg)</span>
 						</div>
 					</div>
-					<span className="pub-year">{data.release_date}</span>
+					<span className="pub-year">Pub {data.original_publication_year}</span>
 				</div>
 			),
-			image: data.img_source,
+			image: data.image,
 		};
 	}
 }

@@ -121,18 +121,6 @@ hr {
   text-decoration: none;
 }
 
-/* .active-navlink-home {
-  color: #ef816c;
-}
-
-.active-navlink-event {
-  color: #3c5a99;
-}
-
-.active-navlink-chat {
-  color: #008080;
-} */
-
 .signout {
   margin-left: auto;
   margin-right: 1rem;
@@ -155,22 +143,62 @@ hr {
   text-decoration: none;
 }
 
-/* #Mli1 {
-  text-align: center;
+/* * This is for Search Section Style */
+/* Styling Menu */
+.menubar-container {
+  -ms-flex-direction: row;
+  flex-direction: row;
+  display: flex;
   width: 100%;
+  min-width: 100px;
+  height: 100px;
+  background-color: #fff;
+  z-index: 1;
+  -webkit-position: fixed;
+  position: fixed;
+  padding: 0px 20px 20px 20px;
+  border-radius: 10px;
+  margin-left: 0px;
+  top: 0px;
+  left: 0px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: 60px;
+  margin-bottom: 0px;
 }
 
-#Mli2 {
+.toggle-component {
+  width: 15%;
+  margin-top: 20px;
+  margin-left: 400px;
+  padding: 10px;
   text-align: center;
-  width: 100%;
 }
 
-#Mli3 {
+.search-component {
+  width: 43%;
+  margin-top: 20px;
+  margin-right: 0px;
+  padding: 10px;
   text-align: center;
-  width: 100%;
-} */
+}
 
-/* This is the Dekstop menu-bar section */Result_card
+.search-bar {
+  border: 2px solid #E43F35;
+  border-radius: 3px;
+}
+
+.spotify-component {
+  width: 15%;
+  height: 80%;
+  margin-top: 0px;
+  margin-left: 16px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 25px;
+}
+
+/* *This is the Dekstop menu-bar section */Result_card
 
 .menubar {
   -ms-flex-direction: column;

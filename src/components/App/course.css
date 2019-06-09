@@ -4,57 +4,12 @@
   Styling for Tab and Mobile
 */
 
-/* Styling Menu */
-.menubar-container {
-  -ms-flex-direction: row;
-  flex-direction: row;
-  display: flex;
+.course {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Noto Sans", "Nunito Sans", "Ubuntu", sans-serif;
+  font-size: 16px;
+  color: #000;
+  text-align: left;
   width: 100%;
-  min-width: 100px;
-  height: 100px;
-  background-color: #fff;
-  z-index: 1;
-  -webkit-position: fixed;
-  position: fixed;
-  padding: 0px 20px 20px 20px;
-  border-radius: 10px;
-  margin-left: 0px;
-  top: 0px;
-  left: 0px;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-top: 60px;
-  margin-bottom: 0px;
-}
-
-.toggle-component {
-  width: 15%;
-  margin-top: 20px;
-  margin-left: 400px;
-  padding: 10px;
-  text-align: center;
-}
-
-.search-component {
-  width: 43%;
-  margin-top: 20px;
-  margin-right: 0px;
-  padding: 10px;
-  text-align: center;
-}
-
-.search-bar {
-  border: 2px solid #E43F35;
-  border-radius: 3px;
-}
-
-.spotify-component {
-  width: 15%;
-  height: 80%;
-  margin-top: 0px;
-  margin-left: 16px;
-  padding: 10px;
-  text-align: center;
 }
 
 
@@ -85,7 +40,7 @@
 }
 
 
-/* This is the Dekstop result-container section */
+/** This is the Dekstop result-container section */
 
 .result-container {
   width: 80%;
@@ -117,6 +72,19 @@
   z-index: 0;
   background-color: #ffffff;
   margin-left: 100px;
+}
+
+.css-w2vgtg {
+  box-sizing: border-box;
+  cursor: pointer;
+  padding-right: 12px;
+  position: absolute;
+  right: 0;
+  top: calc(50% - 10px) !important;
+}
+
+.css-w2vgtg svg.search-icon {
+  fill: #00808060 !important;
 }
 
 
