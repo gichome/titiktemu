@@ -5,13 +5,14 @@ import {
 } from '@appbaseio/reactivesearch';
 import './course.css';
 //import index.css for global container
-import '../../index.css';
-import MainTodoApp from '../Todo/MainTodoApp';
-import System from '../iframe/iframesystem';
+import '../index.css';
+import MainTodoApp from './Todo/MainTodoApp';
+import System from './iframe/iframesystem';
 
 //Navbar Component
-import Navbar from '../Navbar';
+import Navbar from './Navbar';
 import { NavLink } from 'react-router-dom';
+import { Icon } from 'semantic-ui-react';
 
 
 
@@ -34,6 +35,7 @@ class course extends Component {
       message: this.state.isClicked ? "🔬 Filter Hasil" : "🎬 Tunjukan Hasil"
     });
   }
+
   render() {
     return (
       <div className="main-container"> 
@@ -66,8 +68,10 @@ class course extends Component {
             
             {/* Toggle Component */}
             <div className="toggle-component">
-              <div id="l1">
-                  <NavLink className="login-btn" style={{display: 'block', height: '100%'}} to="/home/paper">Switch to paper</NavLink>
+              <div>
+                <NavLink className="course-switch-btn" style={{ display: 'block', height: '90%' }} to="/paper">
+                  <Icon name="angle left"/>{" "}Switch to paper
+                </NavLink>
               </div>
             </div>
 
@@ -95,7 +99,8 @@ class course extends Component {
 
           {/*Left Container (for filter the result of app)*/}
           <div className="sub-container">
-            <div className={
+            <div className=
+              {
                 this.state.isClicked ? "left-bar-optional" : "left-bar"
               }
             >
@@ -193,8 +198,7 @@ class course extends Component {
                 }}
               />
             </div>
-            <div
-              className=
+            <div className=
               {
                 this.state.isClicked
                   ? "result-container-optional"
@@ -205,6 +209,7 @@ class course extends Component {
                 className="filters"
                 showClearAll={true}
                 clearAllLabel="Clear filters"
+                style={{marginLeft:"70px",textColor:"#fff"}}
               />
 
               <ResultCard

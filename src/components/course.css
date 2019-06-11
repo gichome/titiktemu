@@ -39,33 +39,6 @@
   margin-bottom: 0px;
 }
 
-
-/** This is the Dekstop result-container section */
-
-.result-container {
-  width: 80%;
-  margin: 100px -320px 0 0;
-}
-
-.result-container-optional {
-  min-width: 85px;
-}
-
-.revenue-time-container {
-  display: flex;
-  flex-direction: row;
-}
-
-.result-list-info {
-  max-width: 94%;
-  margin-right: 120px;
-}
-
-.filters {
-  padding-left: 80px;
-  width: 50%;
-}
-
 .css-1lzhsvr {
   -webkit-position: relative;
   position: relative;
@@ -279,6 +252,7 @@
   margin-top: -24px;
   text-align: center;
   line-height: 25px;
+  letter-spacing: 0.050em;
 }
 
 .result-card-header {

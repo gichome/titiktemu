@@ -17,8 +17,8 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import rootReducer from './reducers';
 import { setUser, clearUser } from './actions';
 import Spinner from './loadingspinner';
-import paper from './components/App/paper';
-import course from './components/App/course';
+import paper from './components/paper';
+import course from './components/course';
 
 const store = createStore(rootReducer, composeWithDevTools());
 
@@ -46,8 +46,8 @@ class Root extends Component {
             <Route exact path="/chat" component={chat} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
-            <Route exact path="/home/course" component={course} />
-            <Route exact path="/home/paper" component={paper} />
+            <Route exact path="/course" component={course} />
+            <Route exact path="/paper" component={paper} />
             <Route component={nothinghere} />
           </Switch>
         </div>

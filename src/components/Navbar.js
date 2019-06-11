@@ -25,16 +25,17 @@ class Navbar extends Component {
           </NavLink>
         </div>
         {/*This is the function to Show the Menu Page*/}
-        <a href="/">
-          <NavLink activeClassName="active-navlink-home" exact to="/">Home</NavLink>
-        </a>
-        <a href="/event">
-          <NavLink activeClassName="active-navlink-event" exact to="/event">Event</NavLink>
-        </a>
-        <a href="/chat">
-          <NavLink activeClassName="active-navlink-chat" exact to="/chat">Chat</NavLink>
-        </a>
-        <div className="signout">
+        <div className="menu-navbar">
+          <a href="/">
+            <NavLink activeClassName="active-navlink-home" exact to="/">Home</NavLink>
+          </a>
+          <a href="/event">
+            <NavLink activeClassName="active-navlink-event" exact to="/event">Event</NavLink>
+          </a>
+          <a href="/chat">
+            <NavLink activeClassName="active-navlink-chat" exact to="/chat">Chat</NavLink>
+          </a>
+          <div className="signout">
           <NavLink onClick={this.handleSignout}>
             <img
               src = "https://img.icons8.com/windows/30/000000/shutdown.png"
@@ -42,6 +43,7 @@ class Navbar extends Component {
               className="signout-btn"
             />
           </NavLink>
+        </div>
         </div>
       </header>
     );

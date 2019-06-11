@@ -16,7 +16,7 @@ class home extends Component {
                   />
                 </div>
                 <h1 className="home-desc">Bost your knowledge and find your acedemical needs</h1>
-                <NavLink exact to="/home/paper">
+                <NavLink exact to="/paper">
                   <Button className="Paper">
                     Search your paper here
                   </Button>
@@ -31,7 +31,7 @@ class home extends Component {
                   />
                 </div>
                 <h1 className="home-desc">Find your passion and explore your curiosity</h1>
-                <NavLink exact to="/home/Course">
+                <NavLink exact to="/course">
                   <Button className="Course">
                     Search your course here 
                   </Button>

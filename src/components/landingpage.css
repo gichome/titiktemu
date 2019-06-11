@@ -141,7 +141,7 @@ body {
     border-radius: 25px;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
-    box-shadow: 2px 5px 10px 0 #cfcfcf;
+    box-shadow: 2px 5px 10px 0 rgba(228, 62, 53, 0.39);
 }
 
 .signup-btn:hover {
@@ -165,7 +165,7 @@ body {
     border-radius: 25px;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
-    box-shadow: -2px 5px 10px 0 #cfcfcf;
+    box-shadow: -2px 5px 10px 0 rgba(228, 62, 53, 0.39);
 }
 
 .login-btn:hover {
