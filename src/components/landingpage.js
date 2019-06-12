@@ -4,8 +4,23 @@ import '../index.css';
 import { NavLink } from 'react-router-dom';
 
 class landingpage extends Component {
+    // constructor(props) {
+    //     super(props);
+
+    //     this.state = {
+    //         isAccesswithMobile: false,
+    //         message: "Please access with Computer or Laptop, Thank you!"
+    //     };
+    // }
+
     render() {
         return (
+        // <div className=
+        //     {
+        //     this.state.isAccesswithDesktop ?
+        //     "landingpage" : "mobile-detected"
+        //     }
+        // >
         <div className="landingpage">
             <div className="container-width">
                 <div className="clearfix" />

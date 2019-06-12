@@ -21,6 +21,7 @@ class course extends Component {
     super(props);
 
     this.state = {
+      toogleTopic: false,
       isClicked: false,
       message: "🔬Filter Hasil"
     };
@@ -216,6 +217,7 @@ class course extends Component {
                 dataField="original_title"
                 react={{
                   and: [
+                    "Apps",
                     "mainSearch",
                     "language-list",
                     "date-filter",
@@ -235,11 +237,6 @@ class course extends Component {
                     dataField: "original_title.keyword",
                     sortBy: "asc",
                     label: "Sortir dari Judul (A-Z) \u00A0"
-                  },
-                  {
-                    dataField: "release_date.keyword",
-                    sortBy: "asc",
-                    label: "Sortir dari Terupdate \u00A0"
                   }
                 ]}
                 innerClass={{
@@ -268,20 +265,8 @@ class course extends Component {
                                 className="result-image"
                               />
                             </div>
-                            <div className="sub-description">
-                              <div className="result-title">
-                                {data.original_title}
-                                <span className="course-level">
-                                  <p>
-                                    <b> Course level : {data.level} </b> - {data.category}
-                                  </p>
-                                </span>
-                              </div>
-                              <div className="course-description">
-                                <span>
-                                  {data.overview}
-                                </span>
-                              </div>
+                            <div className="result-title">
+                              {data.original_title}
                             </div>
                           </a>
                         </div>

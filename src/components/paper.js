@@ -21,7 +21,6 @@ class paper extends Component {
 		super(props);
 
 		this.state = {
-			toogleTopic: false,
 			isClicked: false,
 			message: "🔬Filter Hasil"
 		};
@@ -124,7 +123,6 @@ class paper extends Component {
                 placeholder="Choose category"
                 react={{
                   and: [
-                    "Apps",
                     "mainSearch",
                     "paperResult",
                     "date-filter",
@@ -161,7 +159,6 @@ class paper extends Component {
                 placeholder="Choose the language"
                 react={{
                   and: [
-                    "Apps",
                     "mainSearch",
                     "paperResult",
                     "date-filter",
@@ -214,7 +211,6 @@ class paper extends Component {
 								URLParams
 								react={{
 									and: [
-										"Apps",
 										"mainSearch",
 										"language-list",
 										"date-filter",
@@ -257,7 +253,7 @@ class paper extends Component {
 						</div>
 						<div>
 							<span>
-								Paper Detail	: <p className="paper-overview">{data.overview}</p>
+								Paper Detail	: <p className="paper-description">{data.overview}</p>
 							</span>
 						</div>
 					</div>

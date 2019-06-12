@@ -74,7 +74,7 @@ span:hover {
   letter-spacing: 0.05em;
 }
 
-.paper-overview {
+.paper-description {
   color: #000;
   font-weight: 300;
   font-style: normal;
@@ -104,10 +104,14 @@ span:hover {
   margin: 4px 0;
 }
 
-.book-title {
+h3.book-title {
   white-space: normal;
   margin-top: 4px;
   letter-spacing: 0.075em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 550px;
 }
 
 .book-title-card {

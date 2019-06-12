@@ -10,12 +10,18 @@ body {
   background-color: #fff;
 }
 
+.mobile-detected {
+  background-color: #D3D3D3;
+}
+
 /* General Styleling*/
 .main-container {
   margin: 0 0px;
 }
 
-.sub-container {
+
+.sub-container, footer {
+  position: relative;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: row;
@@ -229,7 +235,6 @@ hr {
   margin-top: 20px;
   padding: 10px;
   margin-left: 0px;
-  text-align: center;
 }
 
 .search-bar {
