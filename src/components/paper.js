@@ -2,13 +2,15 @@ import React, { Component } from 'react';
 
 import {
 	ReactiveBase, DataSearch, MultiDataList,
-	MultiList, SelectedFilters, ResultList
+	SelectedFilters, ResultList, MultiDropdownList
 } from '@appbaseio/reactivesearch';
-
+import '../index.css';
 import './paper.css';
 //import index.css for global container
-import '../index.css';
+
 import Navbar from './Navbar';
+
+import Navbarmobile from './Navbar-mobile';
 
 import MainTodoApp from './Todo/MainTodoApp';
 import System from './iframe/iframesystem';
@@ -92,15 +94,15 @@ class paper extends Component {
                 this.state.isClicked ? "left-bar-optional" : "left-bar"
               }
             >
-              {/*Todoapp Component*/}
-              <div className="filter-heading center">
-                <b>
-                  {" "}Your Prority List{" "}
-                </b>
-              </div> 
-              <MainTodoApp />
-
-              <hr className="seperator" /> {/*Seperator*/}
+              {/* Todoapp Component */}
+              <div className="todo-component">
+                <div className="filter-heading center">
+                  <b>
+                    {" "}Your Prority List{" "}
+                  </b>
+                </div>
+                <MainTodoApp />
+              </div>
 
               {/*Category List Component*/}
               <div className="filter-heading center">
@@ -108,7 +110,7 @@ class paper extends Component {
                   {" "}Category List{" "}
                 </b>
               </div>
-              <MultiList
+              <MultiDropdownList
                 componentId="category-list"
                 dataField="genres_data.keyword"
                 className="category-filter"
@@ -226,7 +228,8 @@ class paper extends Component {
               {this.state.message}
             </button>
 					</div>
-				</ReactiveBase>
+        </ReactiveBase>
+        <Navbarmobile />
 			</div>
 		);
 	}

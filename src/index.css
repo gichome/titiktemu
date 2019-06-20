@@ -115,13 +115,32 @@ hr {
   height: 30px;
 }
 
+.feedback-btn {
+  color: #000;
+  margin-top: 15px;
+  text-align: center;
+  font-size: 0.6em;
+  width: 50%;
+  height: 50%;
+  padding-right: 20px;
+  border-right: 1px solid #000;
+  transition: 0.25s;
+  display: block;
+  cursor:pointer;
+}
+
+.feedback-btn:hover {
+  text-decoration: underline;
+}
+
 .menu-navbar {
   display: flex;
-  margin-left: auto;
+  justify-content: space-evenly;
 }
 
 .navbar a {
-  display: block;
+  display: flex;
+  justify-content: space-evenly;
   color: black;
   text-align: center;
   margin-top: 3px;
@@ -135,8 +154,7 @@ hr {
 }
 
 .signout {
-  margin-left: 4rem;
-  margin-right: 1rem;
+  
   margin-top:6px;
 }
 
@@ -181,9 +199,9 @@ hr {
 }
 
 .toggle-component {
-  width: 10%;
+  width: 13%;
   margin-top: 18px;
-  margin-left: 420px;
+  margin-left: 20%;
   padding: 10px;
   text-align: center;
 }
@@ -194,7 +212,7 @@ hr {
   text-align: center;
   font-size: 0.8em;
   width: 100%;
-  min-width: 50%;
+  min-width: 90%;
   border-radius: 25px;
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
@@ -232,6 +250,7 @@ hr {
 
 .search-component {
   width: 47%;
+  min-width: 30%;
   margin-top: 20px;
   padding: 10px;
   margin-left: 0px;
@@ -304,5 +323,110 @@ hr {
 
 .filters a:hover {
   background-color: #D3D3D3;
+}
+
+/* 
+  //  Responsive 13inch Laptop
+*/
+
+@media (max-width:1378) {
+
+}
+
+/* 
+  //  Responsive Course & Paper Page 
+  //  for Tab Device 
+*/
+@media (max-width: 1024px) {
+  .navbar-mobile {
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    justify-content: space-evenly;
+    -webkit-position: fixed;
+    position: fixed;
+    bottom:0;
+    height: 60px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .menu-mobile {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+  }
+
+  .spotify-component {
+    display: none;
+  }
+
+  .toggle-component {
+    width: 20%;
+    margin-top: 18px;
+    margin-left: 12%;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .menu-navbar {
+    display: none;
+  }
+}
+
+/* Responsive styling Mobile */
+@media (max-width: 768px) {
+  .navbar {
+    display: -ms-flexbox;
+    display: flex;
+    z-index: 2;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    left:0;
+  }
+
+  .navbar-mobile {
+    z-index: 100;
+    background-color: #fff;
+    color: #000;
+    display: block;
+    justify-content: space-evenly;
+    position: -webkit-sticky;
+    position: sticky;
+    bottom:0;
+    left:0;
+    height: 60px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .spotify-component {
+    display: none;
+  }
+
+  .toggle-component {
+    width: 20%;
+    margin-top: 18px;
+    margin-left: 12%;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .menu-navbar {
+    display: none;
+  }
+
+  .menu-mobile {
+    display: flex;
+    margin-left: auto;
+  }
 }
 

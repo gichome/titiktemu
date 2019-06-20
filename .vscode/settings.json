@@ -21,4 +21,5 @@
     },
     "editor.formatOnType": true,
     "editor.tabSize": 2,
+    "editor.fontWeight": "bold",
 }

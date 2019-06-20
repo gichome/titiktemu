@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './landingpage.css';
-import '../index.css';
+// import '../index.css';
 import { NavLink } from 'react-router-dom';
 
 class landingpage extends Component {

@@ -1,21 +1,16 @@
 import React, { Component } from 'react';
 import {
-  ReactiveBase, DataSearch, MultiDataList,
-  SelectedFilters, ResultCard, MultiDropdownList
+    ReactiveBase, DataSearch, MultiDataList, MultiList, SelectedFilters,
+    ResultCard, ToggleButton
 } from '@appbaseio/reactivesearch';
-import '../index.css';
 import './course.css';
 //import index.css for global container
-
-import MainTodoApp from './Todo/MainTodoApp';
-import System from './iframe/iframesystem';
+import '../../index.css';
+import MainTodoApp from '../Todo/MainTodoApp';
+import System from '../iframe/iframesystem';
 
 //Navbar Component
-import Navbar from './Navbar';
-
-import Navbarmobile from './Navbar-mobile';
-import { NavLink } from 'react-router-dom';
-import { Icon } from 'semantic-ui-react';
+import Navbar from '../Navbar';
 
 
 
@@ -24,6 +19,7 @@ class course extends Component {
     super(props);
 
     this.state = {
+      toogleTopic: false,
       isClicked: false,
       message: "🔬Filter Hasil"
     };
@@ -37,7 +33,6 @@ class course extends Component {
       message: this.state.isClicked ? "🔬 Filter Hasil" : "🎬 Tunjukan Hasil"
     });
   }
-
   render() {
     return (
       <div className="main-container"> 
@@ -45,37 +40,39 @@ class course extends Component {
         {/*Main Container that import ReactiveBase from appbase.io*/}
         
         <ReactiveBase
-          app="titiktemu-course"
-          credentials = "wfzN5Ye65:f567080a-036e-4f0b-9414-c764d173ae28"
+          app="titiktumbuh"
+          credentials="muukPSVII:7f4c58f2-06b2-4b39-822b-146da03027c4"
           theme={{
             typography: {
               fontFamily:
-                '-apple-system, BlinkMacSystemFont, "Nunito Sans", sans-serif',
-                fontSize: "16px"
+                '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Noto Sans", "Nunito Sans", "Ubuntu", sans-serif',
+              fontSize: "16px"
             },
             colors: {
-              textColor: "#000",
+              textColor: "#fff",
               backgroundColor: "#2B2827",
-              primaryTextColor: "#000",
+              primaryTextColor: "#fff",
               primaryColor: "#d9534f",
               titleColor: "#000",
               alertColor: "#d9534f",
               borderColor: "#666"
             }
           }}
-          className="course"
         >
           {/*Menubar Container*/}
           <div className="menubar-container">
             
             {/* Toggle Component */}
             <div className="toggle-component">
-              <div>
-                <NavLink className="course-switch-btn" style={{ display: 'block', height: '90%' }} to="/paper">
-                  <Icon name="angle left"/>{" "}Switch to paper
-                </NavLink>
-              </div>
-            </div>
+              <ToggleButton
+                componentId="Apps"
+                dataField="category_apps.keyword"
+                data={
+                  [{"label": "Paper",   "value": "Paper"},
+                  {"label": "Course",   "value": "Course"}]
+                }
+              />
+            </div>  
 
             {/* Search Component */}
             <div className="search-component">
@@ -85,11 +82,10 @@ class course extends Component {
                   categoryField="title"
                   className="search-bar"
                   queryFormat="and"
-                  placeholder="Search course here"
+                  placeholder="Search paper topic or the course here"
                   iconPosition="right"
                   autosuggest={true}
                   filterLabel="search"
-                  style={{borderColor:"#008080"}}
                 />
             </div>
 
@@ -101,20 +97,19 @@ class course extends Component {
 
           {/*Left Container (for filter the result of app)*/}
           <div className="sub-container">
-            <div className=
-              {
+            <div className={
                 this.state.isClicked ? "left-bar-optional" : "left-bar"
               }
             >
-              {/* Todoapp Component */}
-              <div className="todo-component">
-                <div className="filter-heading center">
-                  <b>
-                    {" "}Your Prority List{" "}
-                  </b>
-                </div>
-                <MainTodoApp />
-              </div>
+              {/*Todoapp Component*/}
+              <div className="filter-heading center">
+                <b>
+                  {" "}Your Prority List{" "}
+                </b>
+              </div> 
+              <MainTodoApp />
+
+              <hr className="seperator" /> {/*Seperator*/}
 
               {/*Category List Component*/}
               <div className="filter-heading center">
@@ -122,7 +117,7 @@ class course extends Component {
                   {" "}Category List{" "}
                 </b>
               </div>
-              <MultiDropdownList
+              <MultiList
                 componentId="category-list"
                 dataField="genres_data.keyword"
                 className="category-filter"
@@ -200,7 +195,8 @@ class course extends Component {
                 }}
               />
             </div>
-            <div className=
+            <div
+              className=
               {
                 this.state.isClicked
                   ? "result-container-optional"
@@ -211,7 +207,6 @@ class course extends Component {
                 className="filters"
                 showClearAll={true}
                 clearAllLabel="Clear filters"
-                style={{marginLeft:"70px",textColor:"#fff"}}
               />
 
               <ResultCard
@@ -219,6 +214,7 @@ class course extends Component {
                 dataField="original_title"
                 react={{
                   and: [
+                    "Apps",
                     "mainSearch",
                     "language-list",
                     "date-filter",
@@ -238,11 +234,6 @@ class course extends Component {
                     dataField: "original_title.keyword",
                     sortBy: "asc",
                     label: "Sortir dari Judul (A-Z) \u00A0"
-                  },
-                  {
-                    dataField: "release_date.keyword",
-                    sortBy: "asc",
-                    label: "Sortir dari Terupdate \u00A0"
                   }
                 ]}
                 innerClass={{
@@ -253,38 +244,26 @@ class course extends Component {
                   resultStats: "result-stats",
                   resultsInfo: "result-list-info",
                 }}
-                onData={function(data) {
+                onData={function(res) {
                   return {
                     description: (
                       <div className="main-description">
                         <div className="ih-item square effect6 top_to_bottom">
                           <a
                             target="homepage.keyword"
-                            href={data.homepage}
+                            href={res.homepage}
                           >
                             <div className="img">
                               <img
                                 src={
-                                  data.img_source
+                                  res.img_source
                                 }
-                                alt={data.img_source}
+                                alt={res.img_source}
                                 className="result-image"
                               />
                             </div>
-                            <div className="sub-description">
-                              <div className="result-title">
-                                {data.original_title}
-                                <span className="course-level">
-                                  <p>
-                                    <b> Course level : {data.level} </b> - {data.category}
-                                  </p>
-                                </span>
-                              </div>
-                              <div className="course-description">
-                                <span>
-                                  {data.overview}
-                                </span>
-                              </div>
+                            <div className="result-title">
+                              {res.original_title}
                             </div>
                           </a>
                         </div>
@@ -303,7 +282,6 @@ class course extends Component {
             </button>
           </div>
         </ReactiveBase>
-        <Navbarmobile />
       </div>
     );
   }

@@ -257,7 +257,8 @@ class MessageForm extends Component {
           value={message}
           ref={node => (this.messageInputRef = node)}
           style={{ marginBottom: "0.7em" }}
-          label={
+          label=
+          {
             <Button
               icon=
               {
@@ -267,9 +268,11 @@ class MessageForm extends Component {
               }
               content={emojiPicker ? 'close' : null}
               onClick={this.handleTogglePicker}
-            />}
+            />
+          }
           labelPosition="left"
-          className={
+          className=
+          {
             errors.some(error => error.message.includes("message"))
               ? "error"
               : ""

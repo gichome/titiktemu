@@ -4,12 +4,57 @@
   Styling for Tab and Mobile
 */
 
-.course {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Noto Sans", "Nunito Sans", "Ubuntu", sans-serif;
-  font-size: 16px;
-  color: #000;
-  text-align: left;
+/* Styling Menu */
+.menubar-container {
+  -ms-flex-direction: row;
+  flex-direction: row;
+  display: flex;
   width: 100%;
+  min-width: 100px;
+  height: 100px;
+  background-color: #fff;
+  z-index: 1;
+  -webkit-position: fixed;
+  position: fixed;
+  padding: 0px 20px 20px 20px;
+  border-radius: 10px;
+  margin-left: 0px;
+  top: 0px;
+  left: 0px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: 60px;
+  margin-bottom: 0px;
+}
+
+.toggle-component {
+  width: 15%;
+  margin-top: 20px;
+  margin-left: 400px;
+  padding: 10px;
+  text-align: center;
+}
+
+.search-component {
+  width: 43%;
+  margin-top: 20px;
+  margin-right: 0px;
+  padding: 10px;
+  text-align: center;
+}
+
+.search-bar {
+  border: 2px solid #E43F35;
+  border-radius: 3px;
+}
+
+.spotify-component {
+  width: 15%;
+  height: 80%;
+  margin-top: 0px;
+  margin-left: 16px;
+  padding: 10px;
+  text-align: center;
 }
 
 
@@ -19,8 +64,7 @@
 .left-bar-optional {
   -ms-flex-direction: column;
   flex-direction: column;
-  justify-content: space-evenly;
-  width: 20%;
+  width: 16%;
   -webkit-position: fixed;
   position: fixed;
   z-index: 1;
@@ -30,7 +74,7 @@
   border: 0px solid #fff;
   border-radius: 10px;
   color: #000;
-  min-width: 16%;
+  min-width: 200px;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   padding: 20px 20px 20px 20px;
@@ -38,6 +82,33 @@
   left: 0;
   margin-top: 15px;
   margin-bottom: 0px;
+}
+
+
+/* This is the Dekstop result-container section */
+
+.result-container {
+  width: 80%;
+  margin: 100px -320px 0 0;
+}
+
+.result-container-optional {
+  min-width: 85px;
+}
+
+.revenue-time-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.result-list-info {
+  max-width: 94%;
+  margin-right: 120px;
+}
+
+.filters {
+  padding-left: 80px;
+  width: 50%;
 }
 
 .css-1lzhsvr {
@@ -48,26 +119,8 @@
   margin-left: 100px;
 }
 
-.css-w2vgtg {
-  box-sizing: border-box;
-  cursor: pointer;
-  padding-right: 12px;
-  position: absolute;
-  right: 0;
-  top: calc(50% - 10px) !important;
-}
-
-.css-w2vgtg svg.search-icon {
-  fill: #00808060 !important;
-}
-
 
 /* Todo App Styling */
-
-.todo-component {
-  display: block;
-}
-
 .todo-app {
   max-width: 100%;
   min-width: 50%;
@@ -91,7 +144,7 @@
 .filter-heading {
   color: #000;
   font-size: 20px;
-  margin-top: 20px;
+  margin-top: 35px;
   margin-bottom: 20px;
 }
 
@@ -116,17 +169,15 @@
 /* styling for Result Container */
 
 .result-item {
-  height: 420px !important;
-  max-width : 480px !important;
-  background-color: #ffffff !important;
-  margin-right: 10px !important;
-  margin-bottom: 10px !important;
+  max-height: 200px;
+  background-color: #212121 !important;
+  margin-right: 17px !important;
+  margin-bottom: 17px !important;
   padding: 0px !important;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  box-flex: 1;
   outline: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -136,7 +187,6 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  display: flexbox;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -159,63 +209,64 @@
   -o-transition-duration: 1s;
   transition-duration: 1s;
   overflow: hidden;
-  height: 307px !important;
-  width: 480px !important;
-  max-width: 600px !important;
+  height: 160px !important;
+  width: 250px !important;
   margin-bottom: 7px;
 }
 
-.result-title {
-  color: #000;
-  font-weight: bold !important;
-  font-size: 16px;
-  padding: 15px;
-  padding-bottom: 5px;
-  padding-top: 20px;
-  margin-bottom: 0px;
-  margin-top: -20px;
-  text-align: left;
-  line-height: 15px;
-  letter-spacing: 0.050em;
+.result-description {
+  -webkit-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+  overflow: hidden;
+  height: 80px !important;
+  width: 250px !important;
+  margin-bottom: 7px;
+  margin-top: 30px
 }
 
-.course-level p {
-  padding: 5px;
-  padding-left: 0px;
-  padding-top: 8px;
-  font-size: 0.8rem;
-  color: rgb(100, 100, 100) !important;
-  font-weight: 300;
-  font-style: italic;
-  text-align: left;
-  line-height: 15px;
-  letter-spacing: 0.08em;
+
+.voters {
+  font-size: 11px;
+  color: #86ddf8;
 }
 
-b {
-  font-weight: bold;
+.details {
+  font-size: 11px;
+  color: #cdcdcd;
+  text-align: center;
 }
 
-.result-card-header {
-  flex-direction: column;
+.sub-title {
+  color: #86ddf8;
+  font-size: 13px;
+  text-align: center;
 }
 
-.result-card-header>div {
-  justify-content: center;
-  margin-top: 5px;
+.time {
+  color: #86ddf8;
 }
 
-.course-description {
-  color: rgb(100, 100, 100) !important;
-  font-weight: 500;
-  font-style: normal;
-  text-align:left;
-  padding: 15px;
-  padding-top: 0px;
-  padding-bottom: 30px;
-  font-size: 0.9rem;
-  line-height: 18px;
-  letter-spacing: 0.06em;
+.rating-time-score-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.revenue-lang-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.revenue-data {
+  font-size: 13px;
+  color: #86ddf8;
+  text-align: center;
 }
 
 .language-data {
@@ -243,7 +294,32 @@ b {
 .result-stats {
   color: #d3d3d3;
   font-size: 14px;
-  margin-left: 10px;
+  margin-left: 80px;
+  margin-top: 25px;
+}
+
+.result-title {
+  display: block;
+  color: #000;
+  font-size: 14px;
+  background-color: #fff;
+  padding-top: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: 600;
+  padding-bottom: 100px;
+  margin-top: -24px;
+  text-align: center;
+  line-height: 25px;
+}
+
+.result-card-header {
+  flex-direction: column;
+}
+
+.result-card-header>div {
+  justify-content: center;
+  margin-top: 5px;
 }
 
 /* styling for scrollbar */
@@ -284,10 +360,8 @@ b {
   border-top: 1px solid #666;
   border-left: 1px solid #666;
 }
-/* 
-  //  Responsive Course & Paper Page 
-  //  for Tab Device 
-*/
+
+/* Responsive styling Tab */
 @media (max-width: 1024px) {
   .toggle-button {
     display: block;
@@ -310,26 +384,13 @@ b {
     padding: 10px 10px 10px 10px;
     margin-right: 15px;
     margin-left: 15px;
-    margin-top: 180px;
-  }
-
-  .left-bar,
-  .result-container-optional {
-    display: none;
+    margin-top: 15px;
   }
 
   .result-item {
     margin: 5px !important;
     border-color: #333333 !important;
     border-radius: 3px !important;
-    max-width: 600px !important;
-    height: 500px !important;
-  }
-
-  .result-image {
-  height: 380px !important;
-  width: 600px !important;
-  margin-bottom: 7px;
   }
 
   .result-stats {
@@ -394,8 +455,9 @@ b {
     margin-right: 0px;
   }
 
-  .todo-component {
-  display: none;
+  .left-bar,
+  .result-container-optional {
+    display: none;
   }
 }
 
@@ -403,31 +465,6 @@ b {
 @media (max-width: 768px) {
   .toggle-button {
     display: block;
-  }
-  
-  .left-bar-optional {
-    width: 60%;
-    z-index: 0;
-    -webkit-position: relative;
-    position: relative;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    background-color: #fff;
-    border: 2px solid #d3d3d3;
-    box-shadow: none;
-    border-radius: 5px;
-    min-width: 200px;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    padding: 10px 10px 10px 10px;
-    margin-right: 15px;
-    margin-left: 15px;
-    margin-top: 180px;
-  }
-
-  .left-bar,
-  .result-container-optional {
-    display: none;
   }
 
   .logo-container {
@@ -472,15 +509,36 @@ b {
     border-radius: 3px !important;
   }
 
-  .todo-component {
-  display: none;
-  }
-
   .result-stats {
     color: #d3d3d3;
     font-size: 14px;
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 15px;
+  }
+
+  .left-bar-optional {
+    width: 60%;
+    z-index: 0;
+    -webkit-position: relative;
+    position: relative;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #fff;
+    border: 2px solid #d3d3d3;
+    box-shadow: none;
+    border-radius: 5px;
+    min-width: 200px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 10px 10px 10px 10px;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: 15px;
+  }
+
+  .left-bar,
+  .result-container-optional {
+    display: none;
   }
 }

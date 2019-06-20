@@ -3,6 +3,8 @@ import '../index.css';
 import { NavLink } from 'react-router-dom';
 import firebase from './firebase';
 
+import Typeform from './typeform/typeform';
+
 class Navbar extends Component {
 
   handleSignout = () => {
@@ -26,6 +28,7 @@ class Navbar extends Component {
         </div>
         {/*This is the function to Show the Menu Page*/}
         <div className="menu-navbar">
+          <Typeform />
           <a href="/">
             <NavLink activeClassName="active-navlink-home" exact to="/">Home</NavLink>
           </a>

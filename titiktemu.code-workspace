@@ -5,7 +5,7 @@
 		}
 	],
 	"settings": {
-		"workbench.iconTheme": "material-icon-theme",
+		"workbench.iconTheme": "vscode-icons",
 		"terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
 		"workbench.colorTheme": "Eva Dark",
 		"files.autoSave": "afterDelay",
@@ -20,8 +20,9 @@
 		"emmet.syntaxProfiles": {
 			"javascript": "jsx"
 		},
-		"editor.fontFamily": "Operator Mono",
+		"editor.fontFamily": "Fira Code Retina",
 		"editor.lineHeight": 25,
-		"editor.tabSize": 2
+		"editor.tabSize": 2,
+		"editor.wordWrap": "on"
 	}
 }
